@@ -69,7 +69,7 @@ def find_top_matching_execs(year, cusip, query_string, df_embeddings, df_exec,to
         threshold (float, optional): Minimum similarity score to consider a match. Defaults to 0.8.
 
     Returns:
-        List[Tuple[str, float]]: List of tuples containing exec_fullname and similarity score.
+        List[Tuple[str, float, float]]: List of tuples containing exec_fullname execid and similarity score.
     """
     
     # Step 1: Get unique execids for the given year and cusip
@@ -94,7 +94,7 @@ def find_top_matching_execs(year, cusip, query_string, df_embeddings, df_exec,to
     
     # Step 5: Filter results above threshold and get top-k matches
     filtered_results = [
-        (filtered_df.iloc[i]["exec_fullname"], similarities[i]) 
+        (filtered_df.iloc[i]["exec_fullname"], filtered_df.iloc[i]["execid"], similarities[i]) 
         for i in range(len(similarities)) if similarities[i] >= threshold
     ]
 
