@@ -15,8 +15,6 @@ class TextDataset(Dataset):
     def __getitem__(self, idx):
         return self.texts[idx]
 
-def encode_name():
-
 # ------------  Load Data  -------------
 
 name_list = pd.read_csv('YOUR DATABASE HERE.csv')
