@@ -11,17 +11,17 @@ To find the top matching executives, use the following function:
 ```python
 find_top_matching_execs(2004, '00790310', 'Hector Ruiz', embeddings_df, name_list)
 
-``` Output
+""" Output
 [
     ('Hector de Jesus Ruiz, Ph.D.', 20918, 0.9238813698120848),
 ]
-```
+"""
 
 ```python
 find_top_matching_execs(2012, '00215F10', 'Mike Prior', embeddings_df, name_list)
 
-``` Output
+""" Output
 [
     ('Michael T. C. Prior, J.D.', 40500, 0.8873492927441616)
 ]
-```
+"""
